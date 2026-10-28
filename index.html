@@ -8,50 +8,38 @@
 <link rel="alternate" type="application/rss+xml" title="sirmmo&#39;s bookmarks" href="feed.xml">
 <link rel="alternate" type="application/json" title="sirmmo&#39;s bookmarks (JSON)" href="bookmarks.json">
 <style>
-body{margin:0;background:#fff;color:#333;font:13px/1.4 Verdana,Arial,Helvetica,sans-serif}
-a{color:#1b5790}a:hover{color:#f00}
-#hdr{background:#1b5790 linear-gradient(#2a6fb1,#1b5790);border-bottom:4px solid #f5a623;padding:0}
-#hdr .in{max-width:960px;margin:0 auto;display:flex;align-items:flex-end;gap:24px;padding:14px 12px 10px}
-#hdr .logo{font:bold 30px/1 "Trebuchet MS",Arial,sans-serif;color:#fff;letter-spacing:-1px;text-decoration:none}#hdr .logo em{font-style:normal;color:#f5a623}
-#hdr nav a{color:#fff;font-weight:bold;text-decoration:none;margin-right:16px;font-size:13px}
-#sub{background:#e8eef5;border-bottom:1px solid #c9d6e4}#sub .in{max-width:960px;margin:0 auto;padding:6px 12px;display:flex;align-items:center;gap:10px;font-size:12px;color:#555}
-#sub input{font:inherit;padding:3px 6px;border:1px solid #9db3cc;width:260px}
-.wrap{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 220px;gap:24px;padding:14px 12px 40px}
-.story{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e5e5e5}.story.hide{display:none}
-.diggbox{flex:none;width:52px;height:48px;border:1px solid #c8c8a8;background:#fffbcc;text-align:center;font-size:10px;color:#777;padding-top:4px;box-sizing:border-box}.diggbox strong{display:block;font-size:17px;color:#1b5790;line-height:1.1}
-.story h3{margin:0;font-size:16px;font-weight:bold}.story h3 a{text-decoration:none}.story h3 a:hover{text-decoration:underline}.story .src{font-size:12px;font-weight:normal;color:#777}
-.story .meta{margin:3px 0 0;font-size:11px;color:#777}.story .meta a{color:#1b5790}.story .desc{margin:6px 0 0;font-size:12px;color:#444;line-height:1.5}
-aside h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;color:#1b5790;border-bottom:2px solid #1b5790;padding-bottom:3px}
-aside ul{list-style:none;margin:0 0 20px;padding:0}aside li{padding:2px 0;font-size:12px}aside .chip{font:inherit;border:0;background:none;color:#1b5790;padding:0;cursor:pointer;text-align:left}aside .chip.on{font-weight:bold;color:#f00}aside .chip span{color:#999}
-.box{border:1px solid #d7e0ea;background:#f5f8fb;padding:8px 10px;font-size:11px;color:#555;margin-bottom:16px}.box a{color:#1b5790}
-footer{max-width:960px;margin:0 auto;padding:10px 12px 30px;font-size:11px;color:#999;border-top:1px solid #e5e5e5}footer a{color:#1b5790}
-@media(max-width:700px){.wrap{grid-template-columns:1fr}}
+:root{--bg:#fbfbfd;--fg:#1b1b22;--muted:#6b6b76;--line:#e6e6ec;--card:#fff;--accent:#5b6cff}
+@media(prefers-color-scheme:dark){:root{--bg:#121218;--fg:#ececf1;--muted:#9a9aa6;--line:#2a2a33;--card:#1a1a22;--accent:#8c97ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}h1{font-size:26px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 20px}
+.search{width:100%;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);outline:none}.search:focus{border-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 22px}.chip{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 10px;cursor:pointer}.chip span{color:var(--muted)}.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}.chip.on span{color:#fff}
+ul{list-style:none;margin:0;padding:0}.bm{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:10px}.bm.hide{display:none}
+.bm .t{font-weight:600;color:var(--fg);text-decoration:none}.bm .t:hover{color:var(--accent)}.bm .h{color:var(--muted);font-size:13px;margin-left:8px}.bm .n{margin:6px 0 0;color:var(--fg)}.bm .m{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}.tag{color:var(--accent);text-decoration:none;margin-right:2px}
+footer{margin-top:40px;color:var(--muted);font-size:13px}footer a{color:inherit}.empty{color:var(--muted)}
 </style>
 </head>
 <body>
-<div id="hdr"><div class="in"><a class="logo" href="./">sirmmo<em>.</em>links</a><nav><a href="./">All</a><a href="feed.xml">RSS</a><a href="bookmarks.json">JSON</a></nav></div></div>
-<div id="sub"><div class="in"><span>1 stories</span><input id="q" type="search" placeholder="Search this page" autocomplete="off"></div></div>
-<div class="wrap">
-<div id="list">
-<div class="bm story" data-tags="" data-text="la repubblica - ultime notizie di cronaca, politica, economia, sport, esteri repubblica.it  ">
-  <div class="diggbox"><strong>1</strong><span>bookmark</span></div>
-  <div class="body">
-    <h3><a href="https://www.repubblica.it/" rel="noopener">la Repubblica - Ultime notizie di Cronaca, Politica, Economia, Sport, Esteri</a> <span class="src">(repubblica.it)</span></h3>
-    <p class="meta">bookmarked by <a href="https://github.com/sirmmo">sirmmo</a> today</p>
-  </div>
-</div>
-</div>
-<aside>
-<div class="box">Links sirmmo bookmarked publicly with <a href="https://ingmmo.com/chord/">Chord</a>. Follow them: paste this page's address into a curated space, or subscribe to the <a href="feed.xml">RSS feed</a>.</div>
-<h4>Topics</h4>
-<ul id="chips"><li>none yet</li></ul>
-</aside>
-</div>
-<footer>sirmmo&#39;s bookmarks · made with Chord, in the spirit of digg.com, 2007.</footer>
-<script>(function(){var q=document.getElementById('q'),chips=document.getElementById('chips'),items=[].slice.call(document.querySelectorAll('.bm')),tag='';
-function apply(){var t=q?q.value.trim().toLowerCase():'';items.forEach(function(li){var ok=(!t||li.dataset.text.indexOf(t)>=0)&&(!tag||(' '+li.dataset.tags+' ').indexOf(' '+tag+' ')>=0);li.classList.toggle('hide',!ok)});if(chips)[].slice.call(chips.children).forEach(function(c){c.classList.toggle('on',c.dataset.tag===tag)})}
-if(chips)chips.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;tag=tag===c.dataset.tag?'':c.dataset.tag;location.hash=tag?'tag='+encodeURIComponent(tag):'';apply()});
+<main>
+<h1>sirmmo&#39;s bookmarks</h1>
+<p class="sub">1 link · <a href="feed.xml">RSS</a> · <a href="bookmarks.json">JSON</a></p>
+<input class="search" id="q" type="search" placeholder="Search" autocomplete="off">
+<div class="chips" id="chips"></div>
+<ul id="list">
+<li class="bm" data-tags="" data-text="la repubblica - ultime notizie di cronaca, politica, economia, sport, esteri repubblica.it  ">
+  <a class="t" href="https://www.repubblica.it/" rel="noopener">la Repubblica - Ultime notizie di Cronaca, Politica, Economia, Sport, Esteri</a>
+  <span class="h">repubblica.it</span>
+  <span class="m"><time datetime="2026-10-28T04:46:24.862Z">2026-10-28</time></span>
+</li>
+</ul>
+<footer>Published with <a href="https://ingmmo.com/chord/">Chord</a>. Follow this page as a curator in Chord: paste its address into a curated space.</footer>
+</main>
+<script>
+(function(){var q=document.getElementById('q'),chips=document.getElementById('chips'),items=[].slice.call(document.querySelectorAll('.bm')),tag='';
+function apply(){var t=q.value.trim().toLowerCase();items.forEach(function(li){var ok=(!t||li.dataset.text.indexOf(t)>=0)&&(!tag||(' '+li.dataset.tags+' ').indexOf(' '+tag+' ')>=0);li.classList.toggle('hide',!ok)});[].slice.call(chips.children).forEach(function(c){c.classList.toggle('on',c.dataset.tag===tag)})}
+chips.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;tag=tag===c.dataset.tag?'':c.dataset.tag;location.hash=tag?'tag='+encodeURIComponent(tag):'';apply()});
 document.addEventListener('click',function(e){var a=e.target.closest('a.tag');if(!a)return;e.preventDefault();tag=decodeURIComponent(a.getAttribute('href').slice(5));location.hash=a.getAttribute('href');apply()});
-if(q)q.addEventListener('input',apply);var m=/tag=([^&]+)/.exec(location.hash);if(m)tag=decodeURIComponent(m[1]);apply();})();</script>
+q.addEventListener('input',apply);var m=/tag=([^&]+)/.exec(location.hash);if(m)tag=decodeURIComponent(m[1]);apply();})();
+</script>
 </body>
 </html>
