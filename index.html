@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sirmmo&#39;s bookmarks</title>
+<meta name="description" content="Links sirmmo bookmarked publicly with Chord.">
+<link rel="alternate" type="application/rss+xml" title="sirmmo&#39;s bookmarks" href="feed.xml">
+<link rel="alternate" type="application/json" title="sirmmo&#39;s bookmarks (JSON)" href="bookmarks.json">
+<style>
+:root{--bg:#fbfbfd;--fg:#1b1b22;--muted:#6b6b76;--line:#e6e6ec;--card:#fff;--accent:#5b6cff}
+@media(prefers-color-scheme:dark){:root{--bg:#121218;--fg:#ececf1;--muted:#9a9aa6;--line:#2a2a33;--card:#1a1a22;--accent:#8c97ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}h1{font-size:26px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 20px}
+.search{width:100%;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);outline:none}.search:focus{border-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 22px}.chip{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 10px;cursor:pointer}.chip span{color:var(--muted)}.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}.chip.on span{color:#fff}
+ul{list-style:none;margin:0;padding:0}.bm{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:10px}.bm.hide{display:none}
+.bm .t{font-weight:600;color:var(--fg);text-decoration:none}.bm .t:hover{color:var(--accent)}.bm .h{color:var(--muted);font-size:13px;margin-left:8px}.bm .n{margin:6px 0 0;color:var(--fg)}.bm .m{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}.tag{color:var(--accent);text-decoration:none;margin-right:2px}
+footer{margin-top:40px;color:var(--muted);font-size:13px}footer a{color:inherit}.empty{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>sirmmo&#39;s bookmarks</h1>
+<p class="sub">0 links · <a href="feed.xml">RSS</a> · <a href="bookmarks.json">JSON</a></p>
+<input class="search" id="q" type="search" placeholder="Search" autocomplete="off">
+<div class="chips" id="chips"></div>
+<ul id="list">
+<li class="empty">Nothing public yet.</li>
+</ul>
+<footer>Published with <a href="https://ingmmo.com/chord/">Chord</a>. Follow this page as a curator in Chord: paste its address into a curated space.</footer>
+</main>
+<script>
+(function(){var q=document.getElementById('q'),chips=document.getElementById('chips'),items=[].slice.call(document.querySelectorAll('.bm')),tag='';
+function apply(){var t=q.value.trim().toLowerCase();items.forEach(function(li){var ok=(!t||li.dataset.text.indexOf(t)>=0)&&(!tag||(' '+li.dataset.tags+' ').indexOf(' '+tag+' ')>=0);li.classList.toggle('hide',!ok)});[].slice.call(chips.children).forEach(function(c){c.classList.toggle('on',c.dataset.tag===tag)})}
+chips.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;tag=tag===c.dataset.tag?'':c.dataset.tag;location.hash=tag?'tag='+encodeURIComponent(tag):'';apply()});
+document.addEventListener('click',function(e){var a=e.target.closest('a.tag');if(!a)return;e.preventDefault();tag=decodeURIComponent(a.getAttribute('href').slice(5));location.hash=a.getAttribute('href');apply()});
+q.addEventListener('input',apply);var m=/tag=([^&]+)/.exec(location.hash);if(m)tag=decodeURIComponent(m[1]);apply();})();
+</script>
+</body>
+</html>
