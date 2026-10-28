@@ -5,7 +5,12 @@
     <link>https://sirmmo.github.io/chord-bookmarks/</link>
     <atom:link href="https://sirmmo.github.io/chord-bookmarks/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Links sirmmo bookmarked publicly with Chord.</description>
-    <lastBuildDate>Wed, 28 Oct 2026 04:46:17 GMT</lastBuildDate>
-
+    <lastBuildDate>Wed, 28 Oct 2026 04:46:29 GMT</lastBuildDate>
+    <item>
+      <title>la Repubblica - Ultime notizie di Cronaca, Politica, Economia, Sport, Esteri</title>
+      <link>https://www.repubblica.it/</link>
+      <guid isPermaLink="false">chord-bookmark-fb0c8bec-5f70-4f9a-82a1-b81eb5473108</guid>
+      <pubDate>Wed, 28 Oct 2026 04:46:24 GMT</pubDate>
+    </item>
   </channel>
 </rss>
